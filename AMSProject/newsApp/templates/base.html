@@ -1,0 +1,27 @@
+{% comment %} 
+
+1. TEMPLATE {% templatetag openblock %} often used to control the rendering of the templates
+2. TEMLATE {{  }} Often used to replace variables when template is rendered
+3. TEMPLATE {% filter  %}{% endfilter %} Often used to modify appearance, display etc
+
+ {% endcomment %}
+ 
+ {% load static %}
+ <!DOCTYPE html>
+ <html>
+     <head>
+         <title>{% block title %}{% endblock %}</title>
+         {% comment %} <link href="{% static "css/blog.css" %}" rel="stylesheet"> {% endcomment %}
+     </head>
+ <body>
+     <div id="content">
+         {% block content %}
+         {% endblock %}
+     </div>
+ 
+     
+ </body>
+ </html>
+ 
+ 
+ 

@@ -1,0 +1,22 @@
+<div>
+    <span>
+            {% if page.has_previous %}
+                <a href="?page={{ page.previous_page_number }}">
+                    Previous
+                </a>
+            {% endif %}
+
+            {% comment %} SHOW THE CURRENT PAGE {% endcomment %}
+            <span>
+                Page : {{ page.number }} of {{ page.paginator.num_pages }}
+            </span>
+            {% comment %} SHOW THE NEXT PAGE IF IT  {% endcomment %}
+            {% if page.has_next %}
+                <a href="?page={{ page.next_page_number }}">
+                    Next
+                </a>
+            {% endif %}
+    </span>
+    
+</div>
+

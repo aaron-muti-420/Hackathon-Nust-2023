@@ -1,0 +1,50 @@
+{% extends "news/base.html" %} 
+{% block title %} News App | Home{% endblock %}
+
+{% block content %}
+    <h1>News Applications</h1>
+    {% for article in articles %}
+        <h2>
+            <a href="{{ article.get_absolute_url }}">
+                {{ article.title }}
+        </h2>
+
+        <p>
+            <b>Tags :</b> 
+
+            {% for tag in article.tags.all %}
+
+                <a href="{% url "newsApp:article_list_by_tag" tag.slug %}">
+                    {{ tag.name }}
+                </a>
+
+                {% if not forloop.last %}, {% endif %}
+
+            {% endfor %}
+
+            {% comment %} {{ article.tags.all|join:", " }} {% endcomment %}
+            
+        </p> 
+
+        <p>
+            Published : {{ article.publish }} by {{ article.author }}
+        </p>
+
+        {{ article.body | truncatewords:50|linebreaks }}
+    {% endfor %}
+
+    {% comment %} 
+        Function Based View
+        {% include "../pagination.html" with page=articles %} 
+    {% endcomment %}
+
+    {% include "../pagination.html" with page=articles %} 
+
+    {% comment %} CLASS BASED WAY OF PASSING THE PAGINATION {% endcomment %}
+    {% comment %} {%include "../pagination.html" with page=page_obj %} {% endcomment %}
+
+{% endblock %}
+
+
+
+

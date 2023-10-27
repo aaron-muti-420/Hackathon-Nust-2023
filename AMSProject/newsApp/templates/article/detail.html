@@ -1,0 +1,66 @@
+{% extends "news/base.html" %} 
+
+{% block title %} News | {{ article.title }} {% endblock %}
+
+{% block content %}
+    <h1>{{ article.title }} </h1>
+
+    <p>
+        Published {{ article.publish }} by {{ article.author }}
+    </p>
+    <p>
+        Tags : {{ article.tags.all|join:", " }}
+
+    {{ article.body | linebreaks }}
+
+    {% comment %} ALLOW PEOPLE TO SHARE THE POST {% endcomment %}
+    <p>
+        <a href="{% url 'newsApp:article_share' article.id %}">
+            Share post
+        </a>
+    </p>
+
+    {% with comments.count as total_comments %} 
+        <h2> 
+            {{ total_comments }} comment{{ total_comments|pluralize }}
+        </h2>
+    {% endwith %}
+
+    {% comment %} BELOW ARE THE LIST OF COMMENTS {% endcomment %}
+    {% for comment in comments %}
+        <div class="comment">
+         
+            <p>
+                Comment {{ forloop.counter }} by {{ comment.name }}
+                {{ comment.created }}
+            </p>
+            <h4>
+                {{ comment.body }}
+            </h4>
+            
+        </div>
+
+        {% empty %}
+            <p>There are no comments yet.</p>
+    {% endfor %}
+
+    {% comment %} Success Message After sending a message {% endcomment %}
+    {% if new_comment %}
+        </h2>Your Comment has been successfully added.</h2>
+    {% else %}
+    <h2>
+        Add a New Comment.
+    </h2>
+    <form method="post">
+        {{ comment_form.as_p }}
+        {% csrf_token  %}
+        <p>
+            <input type="submit" value="Add Comment"/>
+        </p>
+
+    {% endif %}
+        
+
+{% endblock %}
+
+
