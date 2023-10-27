@@ -49,19 +49,21 @@ class Article(models.Model):
     publish = models.DateTimeField(default=timezone.now)
     #TIME THE ARTICLE IS CREATED
     created = models.DateTimeField(auto_now_add=True)
+     #Updated
+    updated = models.DateTimeField(auto_now=True)
     #Set the default status
     status = models.CharField(max_length=10,choices=STATUS_CHOICES,default='draft')
-
+   
 
     
     # DEFAULT MANAGER
     objects = models.Manager()
 
     # OUR CUSTOM
-    #publishedArticles = PublishedArticlesManager()
+    publishedArticles = PublishedArticlesManager()
     
     #Instantiate the Manager
-    #tags = TaggableManager()
+    tags = TaggableManager()
     """
             TAGS MANAGER ALLOWS
     1. Add
@@ -71,14 +73,14 @@ class Article(models.Model):
     """
 
     #Call the specific post 
-    # def get_absolute_url(self):
-    #     return reverse("newsApp:article_details", 
-    #                    args=[self.publish.year,
-    #                          self.publish.month,
-    #                          self.publish.day,
-    #                          self.slug
-    #                          ]
-    #                    )
+    def get_absolute_url(self):
+        return reverse("newsApp:article_details", 
+                       args=[self.publish.year,
+                             self.publish.month,
+                             self.publish.day,
+                             self.slug
+                             ]
+                       )
     
 
     #Create a meta class that contains the metadata for the model
