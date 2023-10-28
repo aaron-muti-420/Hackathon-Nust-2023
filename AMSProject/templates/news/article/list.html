@@ -1,8 +1,9 @@
-{% extends "news/base.html" %} 
-{% block title %} News App | Home{% endblock %}
+{% extends "../../base.html" %} 
+
+{% block title %} News{% endblock %}
 
 {% block content %}
-    <h1>News Applications</h1>
+    <h1>WELCOME TO THE LATEST NEWS ARTICLES!</h1>
     {% for article in articles %}
         <h2>
             <a href="{{ article.get_absolute_url }}">
@@ -38,7 +39,7 @@
         {% include "../pagination.html" with page=articles %} 
     {% endcomment %}
 
-    {% include "../pagination.html" with page=articles %} 
+    {% include "../../partials/pagination.html" with page=articles %} 
 
     {% comment %} CLASS BASED WAY OF PASSING THE PAGINATION {% endcomment %}
     {% comment %} {%include "../pagination.html" with page=page_obj %} {% endcomment %}

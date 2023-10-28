@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Home {% endblock %}
+
+{% comment %} Enter this information into the Base.html page {% endcomment %}
+
+{% block content %}
+
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis" style="color: #b55610;">WELCOME TO THE NUST ALUMNI NETWORK</h1>
+
+    <div class="col-lg-6 mx-auto">
+
+      <p class="lead mb-4"  style="color: #5E3A17;">
+          THIS PLATFORM IS DESIGNED TO HELP YOU GAIN AN ADVANTAGE IN YOUR CAREER BY
+          STAYING CONNECTED WITH US! WE CREATED THIS PLATFORM 
+          TO HELP YOU ACHIEVE MORE IN YOUR JOURNEY OF LIFE AND ALWAYS KNOW YOU ARE NOT ALONE!
+      </p>
+      
+      <hr/>
+    </div>
+  </div>
+
+  {% comment %} 
+
+    BELOW ARE IS THE SOURCE CODE THAT IS DESIGNED TO TAKE US TO THE SPECIFIC APPLICATIONS THAT WE HAVE
+
+  {% endcomment %}
+
+  <!-- THREE COLUMN DESIGNS FOR OUR MAIN PRIORITY APPS -->
+  <div class="row g-5">
+    <div class="col-12 col-md-6 col-lg-4">
+
+        <!-- CARD 1 : NEWS SECTION -->
+        <div class="card" aria-hidden="true">
+            <img src="{% static 'img/slideshow1.jpg' %}" class="card-img-top" alt="News Image"
+            style="padding: 10px;   border-radius: 20px;">
+
+            <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                    <span class="col-6">NEWS</span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="col-7">READ ON ANY OF THE MISSED <span class="badge badge-success">EVENTS INFORMATION</span></span>
+                    <span class="col-4"></span><br/>
+                    <span class="col-4">SHARE THE INFORMATION<span class="badge badge-success">THROUGH EMAIL</span> </span><br/>
+                    <span class="col-4">COMMENT ON THE EVENTS </span><span class="badge badge-success">ENGAGE WITH OTHERS</span> <br/>
+                  </p>
+                  <h4>
+                    <a href="news/" tabindex="-1" class="btn btn-primary col-6">
+                      GO TO NEWS
+                    </a>
+                  </h4>
+                  
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+        <!-- CARD 2 : CAREER ADVICE -->
+        <div class="card" aria-hidden="true">
+            <img src="{% static 'img/slideshow5.jpg' %}" class="card-img-top" alt="News Image"
+            style="padding: 10px;   border-radius: 20px;">
+            
+            <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                    <span class="col-6">CAREER GUIDANCE</span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="col-7">READ THE ARTICLES FROM <span class="badge badge-warning">INDUSTRY LEADERS</span></span>
+                    <span class="col-4"></span><br/>
+                    <span class="col-4">WATCH VIDEOS ON CAREER GROWTH<span class="badge badge-warning">FROM US!</span> </span><br/>
+                    <span class="col-4">SEARCH FOR SPECIFIC </span><span class="badge badge-warning">KEYWORDS AND TOPICS</span> <br/>
+                  </p>
+                  <h4>
+                    <a href="career-advice/" tabindex="-1" class="btn btn-primary col-6">
+                      CAREER GUIDANCE
+                    </a>
+                  </h4>
+                  
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+        <!-- CARD 3 : PLANNED EVENTS -->
+        <div class="card" aria-hidden="true">
+          <img src="{% static 'img/slideshow2.jpg' %}" class="card-img-top" alt="News Image"
+          style="padding: 10px;   border-radius: 20px;">
+          
+          <div class="card-body">
+              <h5 class="card-title placeholder-glow">
+                  <span class="col-6">UPCOMING EVENTS</span>
+                </h5>
+                <p class="card-text placeholder-glow">
+                  <span class="col-7">HEAR ABOUT THE LATEST <span class="badge badge-danger">EVENTS</span></span>
+                  <span class="col-4"></span><br/>
+                  <span class="col-4">SEE THE SCHEDULED<span class="badge badge-danger">ALUMNI MEETUPS!</span> </span><br/>
+                  <span class="col-4">SHARE THE UPCOMING EVENTS </span><span class="badge badge-danger">WITH OTHERS!</span> <br/>
+                </p>
+                <h4>
+                  <a href="" tabindex="-1" class="btn btn-primary col-6">
+                    UPCOMING EVENTS
+                  </a>
+                </h4>
+          </div>
+      </div>
+    </div>
+
+  <div class="col-12 col-md-6 col-lg-4">
+        <!-- CARD 4 : ELECTIONS -->
+        <div class="card" aria-hidden="true">
+          <img src="{% static 'img/YourVoteCounts.jpg' %}" class="card-img-top" alt="News Image"
+          style="padding: 10px;   border-radius: 20px; height: 268px; ">
+            
+            <div class="card-body">
+                <h5 class="card-title placeholder-glow">
+                    <span class="col-6">ELECTIONS</span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="col-7">READ THE LATEST ON ALL <span class="badge badge-info">ALUMNI POLITICS</span></span>
+                    <span class="col-4"></span><br/>
+                    <span class="col-4">TAKE PART IN OUR DEMOCRATIC EFFORTS BY <span class="badge badge-info">MAKING A VOTE</span> </span><br/>
+                    <span class="col-4">VERIFY THE TRANSPARENCY OF RESULTS BY </span><span class="badge badge-info">VIEW LIVE POLLS</span> <br/>
+                  </p>
+                  <h4>
+                    <a href="#" tabindex="-1" class="btn btn-primary col-6">
+                      VISIT ELECTIONS
+                    </a>
+                  </h4>
+                  
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+      <!-- CARD 5 : JOBS & VACANCIES -->
+      <div class="card" aria-hidden="true">
+          
+          <img src="{% static 'img/vacancy.png' %}" class="card-img-top" alt="News Image"
+            style="padding: 10px; border-radius: 20px; height: 268px;">
+          
+          <div class="card-body">
+              <h5 class="card-title placeholder-glow">
+                  <span class="col-6">VACANCIES & INTERNSHIPS</span>
+                </h5>
+                <p class="card-text placeholder-glow">
+                  <span class="col-7">VIEW THE VERY LATEST <span class="badge badge-warning">JOB OPENINGS AND INTERNSHIPS</span></span>
+                  <span class="col-4"></span><br/>
+                  <span class="col-4">CONNECT WITH THE NUMEROUS <span class="badge badge-warning">EMPLOYERS</span> </span><br/>
+                  <span class="col-4">SEE THE LATEST SKILL SETS IN </span><span class="badge badge-warning">DEMAND AND COMMON</span> <br/>
+                </p>
+                <h4>
+                  <a href="#" tabindex="-1" class="btn btn-primary col-6">
+                    VISIT OPPORTUNITIES 
+                  </a>
+                </h4>
+                
+          </div>
+      </div>
+      
+  </div>
+
+  <div class="col-12 col-md-6 col-lg-4">
+    <!-- CARD 6 : JOIN THE PLATFORM -->
+    <div class="card" aria-hidden="true">
+        <img src="{% static 'img/slideshow6.png' %}" class="card-img-top" alt="News Image"
+        style="padding: 10px;   border-radius: 20px;">
+        
+        <div class="card-body">
+            <h5 class="card-title placeholder-glow">
+                <span class="col-6">JOIN THE COMMUNITY</span>
+              </h5>
+              <p class="card-text placeholder-glow">
+                <span class="col-7">GAIN ACCESS TO THE FIRST JOB OFFERS <span class="badge badge-warning">VIA EMAIL</span></span>
+                <span class="col-4"></span><br/>
+                <span class="col-4">GROW YOUR NETWORK BY <span class="badge badge-warning">CONNECTING WITH OTHER ALUMNI</span> </span><br/>
+                <span class="col-4">RECEIVE A DAILY DOSE OF </span><span class="badge badge-warning">CAREER ADVICE</span> <br/>
+              </p>
+              <h4>
+                <a href="#" tabindex="-1" class="btn btn-primary col-6">
+                  GO TO COMMUNITY
+                </a>
+              </h4>
+              
+        </div>
+    </div>
+    
+</div>
+
+  </div>
+
+
+
+  {% comment %} <div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">
+
+    <div class="carousel-indicators">
+      <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="0"
+        class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+     
+      <div class="carousel-item active">
+        <img src="{% static 'img/slideshow2.jpg' %}"
+          class="d-block"
+          height = "700px"
+          width="100%"
+          alt="Wild Landscape" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+
+        <img  src="{% static 'img/slideshow3.jpg' %}"
+              class="d-block"               
+              height = "700px"
+              width="100%"
+              alt="Camera" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        
+        <img  src="{% static 'img/slideshow4.jpg' %}"
+              height = "700px"
+              class="d-block w-50"
+              alt="Exotic Fruits" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions"
+      data-mdb-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions"
+      data-mdb-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>    {% endcomment %}
+
+{% endblock %}
+
+

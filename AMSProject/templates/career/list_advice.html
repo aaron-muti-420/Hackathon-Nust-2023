@@ -1,0 +1,68 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block title %} Career Advice{% endblock %}
+
+
+{% block content %}
+
+  <div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis" style="color: #b55610;">CAREER ADVICE FROM NUST ALUMNI NETWORK</h1>
+
+    <div class="col-lg-6 mx-auto">
+
+      <p class="lead mb-4"  style="color: #5E3A17;">
+        GET ADVICE FROM THE INDUSTRY LEADERS AND EXPERTS ON HOW TO GROW YOUR CAREER!
+    </p>
+      
+      <hr/>
+    </div>
+  </div>
+
+    {% for advice in advice %}
+        <h2>
+
+                {{ advice.title_of_advice }} 
+                <span>{{ advice.person_name }}</span>
+        </h2>
+
+        {% comment %} 
+          Show the tags just above the view itself
+        {% endcomment %}
+
+        <p>
+          <b>Topic :</b> 
+
+          {% for tag in advice.tags.all %}
+
+              <a href="{% url "careeerAdviceApp:advice_list_by_tag" tag.slug %}">
+                  {{ tag.name }}
+              </a>
+
+              {% if not forloop.last %}, {% endif %}
+
+          {% endfor %}
+
+          {% comment %} {{ article.tags.all|join:", " }} {% endcomment %}
+          
+      </p> 
+
+
+        <p>
+            Published : {{ advice.publish }} by {{ advice.author }}
+        </p>
+
+        {{ advice.the_advise }}
+    {% endfor %}
+
+    {% comment %} 
+        Function Based View
+        {% include "../pagination.html" with page=articles %} 
+    {% endcomment %}
+
+
+    {% comment %} CLASS BASED WAY OF PASSING THE PAGINATION {% endcomment %}
+
+    {%include "../partials/pagination.html" with page=page_obj %}
+
+{% endblock %}

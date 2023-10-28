@@ -1,0 +1,14 @@
+{% extends '../base.html' %}
+{% block content %}
+
+<div class="card text-center">
+    <div class="card-body">
+        <h1>Welcome To Electronic Voting</h1>
+        <p>Select Your Leader</p>
+        <a class="btn btn-dark" href="{% url 'electronicVotingApp:index' %}">
+            View Available Polls</a>
+    </div>
+</div>
+{% endblock %}
+
+
