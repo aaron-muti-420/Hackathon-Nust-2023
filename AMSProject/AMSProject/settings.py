@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'eventsApp',
     'galleryApp',
     'votingApp',
+    'registerUserApp',
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
