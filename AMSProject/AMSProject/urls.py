@@ -35,7 +35,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include('landingApp.urls'), name="landing_page"),
     path('news/',include('newsApp.urls', namespace='newsApp')),
-    path('voting/', include('electronicVotingApp.urls')),
+    path('gallery/',include('galleryApp.urls')),
     path('sitemap.xml', sitemap, {'sitemaps':sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('career-advice/',include('careerAdviceApp.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

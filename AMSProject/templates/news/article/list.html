@@ -3,7 +3,22 @@
 {% block title %} News{% endblock %}
 
 {% block content %}
-    <h1>WELCOME TO THE LATEST NEWS ARTICLES!</h1>
+
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis" style="color: #b55610;">
+        WELCOME TO OUR NEWS!
+    </h1>
+
+    <div class="col-lg-6 mx-auto">
+
+      <p class="lead mb-4"  style="color: #5E3A17;">
+          GET THE LATEST NEWS ABOUT OUR ALUMNI AND THE ALMA MATE HERE!
+      </p>
+      
+      <hr/>
+    </div>
+  </div>
+
     {% for article in articles %}
         <h2>
             <a href="{{ article.get_absolute_url }}">

@@ -1,0 +1,69 @@
+{% extends "../base.html" %} 
+
+{% block title %} News{% endblock %}
+
+{% block content %}
+
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis" style="color: #b55610;">
+        WELCOME TO OUR GALLERY
+    </h1>
+
+    <div class="col-lg-6 mx-auto">
+
+      <p class="lead mb-4"  style="color: #5E3A17;">
+          STAY IN TOUCH AND WORK WITH US IN ORDER 
+          TO READ SEE THE LATEST GALLERY
+      </p>
+      
+      <hr/>
+    </div>
+  </div>
+
+    {% for event in gallery_list %}
+
+    <div class="col">
+
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+
+            <img src="{{ event.event_image.url }}" class="card" alt="2023 Graduation" height=540px width=430px>
+
+              <h4 class="my-0 fw-normal">
+                    <a href="{{ post.get_absolute_url }}" >
+                        {{ event.name_of_event }}
+                    </a>
+                </h4>
+            </div>
+
+            <div class="card-body">
+                <h5 class="card-title pricing-card-title">
+                    <small class="text-muted fw-light">
+                        Date : {{ event.date_of_event }} at {{ event.event_location }}
+                    </small>
+                </h5>
+                <!-- INFO -->
+              <ul class="list-unstyled mt-3 mb-4">
+                
+                <li>
+                    {{ event.extra_info }}
+                </li>
+              </ul>
+              
+            </div>
+        </div>
+
+
+    {% endfor %}
+
+{% comment %} BELOW IS THE PREFERED DESIGN {% endcomment %}
+
+        
+
+
+
+{% endblock %}
+
+
+
+
