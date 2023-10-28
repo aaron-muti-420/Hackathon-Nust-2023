@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'careerAdviceApp',
     'eventsApp',
     'galleryApp',
+    'votingApp',
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',

@@ -1,6 +1,6 @@
 {% extends "../base.html" %} 
 
-{% block title %} News{% endblock %}
+{% block title %} Gallery{% endblock %}
 
 {% block content %}
 
@@ -25,10 +25,9 @@
             
         </div>
 
-        {% for event in gallery_list %}
+    <div class="col-12">
 
-    <div class="col">
-
+    {% for event in gallery_list %}
         <div class="card mb-4 rounded-3 shadow-sm">
             <div class="card-header py-3">
 

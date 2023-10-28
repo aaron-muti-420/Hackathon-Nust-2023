@@ -7,6 +7,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
+
                 <div class="px-4 py-5 my-5 text-center">
                     <h1 class="display-5 fw-bold text-body-emphasis" style="color: #b55610;">
                         LATEST AND UPCOMING EVENTS
@@ -19,12 +20,11 @@
                       </p>                      
                       <hr/>
                     </div>
-                  </div>
+                </div>
             </div>
 
             {% for event in events_list %}
             <div class = "card shadow p-3 mb-5 bg-white rounded" style="width: 18rem; padding-top: 15px; margin: 20px;" >
-
                 <div class="cardbody" style="padding-top: 15px;">
                     <div class="card-title">
                         <h5>{{ event.event_name }} : {{ event.department }}</h5>
