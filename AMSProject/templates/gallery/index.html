@@ -4,23 +4,28 @@
 
 {% block content %}
 
-<div class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold text-body-emphasis" style="color: #b55610;">
-        WELCOME TO OUR GALLERY
-    </h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="px-4 py-5 my-5 text-center">
+                <h1 class="display-5 fw-bold text-body-emphasis" style="color: #b55610;">
+                    WELCOME TO OUR GALLERY
+                </h1>
+            
+                <div class="col-lg-6 mx-auto">
+            
+                  <p class="lead mb-4"  style="color: #5E3A17;">
+                      STAY IN TOUCH AND WORK WITH US IN ORDER 
+                      TO READ SEE THE LATEST GALLERY
+                  </p>
+                  
+                  <hr/>
+                </div>
+            </div>
+            
+        </div>
 
-    <div class="col-lg-6 mx-auto">
-
-      <p class="lead mb-4"  style="color: #5E3A17;">
-          STAY IN TOUCH AND WORK WITH US IN ORDER 
-          TO READ SEE THE LATEST GALLERY
-      </p>
-      
-      <hr/>
-    </div>
-  </div>
-
-    {% for event in gallery_list %}
+        {% for event in gallery_list %}
 
     <div class="col">
 
@@ -55,6 +60,13 @@
 
 
     {% endfor %}
+
+    </div>
+</div>
+
+
+
+    
 
 {% comment %} BELOW IS THE PREFERED DESIGN {% endcomment %}
 

@@ -1,0 +1,42 @@
+{% extends "../base.html" %} 
+
+{% block title %}Events{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="px-4 py-5 my-5 text-center">
+                    <h1 class="display-5 fw-bold text-body-emphasis" style="color: #b55610;">
+                        LATEST AND UPCOMING EVENTS
+                    </h1>
+                
+                    <div class="col-lg-6 mx-auto">
+                
+                      <p class="lead mb-4"  style="color: #5E3A17;">
+                          STAY UPDATED WITH UPCOMING EVENTS
+                      </p>                      
+                      <hr/>
+                    </div>
+                  </div>
+            </div>
+
+            {% for event in events_list %}
+            <div class = "card shadow p-3 mb-5 bg-white rounded" style="width: 18rem; padding-top: 15px; margin: 20px;" >
+
+                <div class="cardbody" style="padding-top: 15px;">
+                    <div class="card-title">
+                        <h5>{{ event.event_name }} : {{ event.department }}</h5>
+                        <p><b>Duration</b> : {{ event.start_date }} until {{ event.end_date }}</p>
+                        <p><b>Organizer </b> : {{ event.event_organizer }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %} 
+
+        </div>
+    </div>
+
+{% endblock %}
+
